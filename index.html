@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ★ 修改这里：浏览器标签页标题 + 搜索引擎描述 -->
+  <title>你的名字 · 个人主页</title>
+  <meta name="description" content="你的名字的个人主页，一名热爱技术与设计的开发者。" />
+  <meta name="author" content="你的名字" />
+
+  <!-- 社交平台分享卡片 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="你的名字 · 个人主页" />
+  <meta property="og:description" content="你的名字的个人主页，一名热爱技术与设计的开发者。" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232f6fed'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>Y</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- ============ 顶部导航 ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <!-- ★ 修改这里：左上角的名字缩写 -->
+      <a class="nav__brand" href="#top">
+        <span class="nav__dot"></span>
+        <span>你的名字</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="主导航">
+        <a href="#about">关于我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">作品</a>
+        <a href="#contact">联系</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="切换深浅色主题" title="切换深浅色主题">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></g></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="打开菜单" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 首屏 ============ -->
+    <section class="hero" id="top">
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__avatar reveal">
+          <!-- ★ 想用自己的照片：把下面的 <svg> 整体换成 <img src="avatar.jpg" alt="我的头像"> -->
+          <svg viewBox="0 0 200 200" role="img" aria-label="头像占位图">
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#4f8cff"/>
+                <stop offset="100%" stop-color="#7b5cff"/>
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="100" fill="url(#grad)"/>
+            <circle cx="100" cy="78" r="30" fill="rgba(255,255,255,.92)"/>
+            <path d="M40 176c8-32 32-48 60-48s52 16 60 48z" fill="rgba(255,255,255,.92)"/>
+          </svg>
+        </div>
+
+        <div class="hero__text">
+          <p class="hero__hello reveal">你好，我是</p>
+          <!-- ★ 修改这里：你的名字 -->
+          <h1 class="reveal">你的名字</h1>
+          <!-- ★ 修改这里：一句话介绍自己 -->
+          <p class="hero__tagline reveal">
+            一名热爱技术与设计的开发者，喜欢把复杂的想法做成简单好用的东西。
+          </p>
+
+          <div class="hero__cta reveal">
+            <a class="btn btn--primary" href="#projects">看看我的作品</a>
+            <a class="btn btn--ghost" href="#contact">联系我</a>
+          </div>
+
+          <ul class="hero__meta reveal">
+            <!-- ★ 修改这里：所在城市 / 当前状态 -->
+            <li><span class="meta-dot"></span>中国 · 上海</li>
+            <li><span class="meta-dot"></span>正在寻找新机会</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 关于我 ============ -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">01 — 关于我</span>
+        <h2>简单介绍一下自己</h2>
+      </div>
+
+      <div class="about">
+        <!-- ★ 修改这里：换成你的自我介绍，两三段最合适 -->
+        <p class="reveal">
+          我是一名专注于 Web 开发的工程师，目前的工作主要围绕前端架构与用户体验。
+          我喜欢把模糊的需求拆解成清晰的方案，也享受把界面打磨到顺手的那个过程。
+        </p>
+        <p class="reveal">
+          工作之外，我会写一点技术笔记，也会做一些自己用的小工具。
+          如果你对我的项目感兴趣，欢迎随时找我聊聊。
+        </p>
+
+        <div class="facts reveal">
+          <div class="fact">
+            <strong>3+</strong>
+            <span>年开发经验</span>
+          </div>
+          <div class="fact">
+            <strong>20+</strong>
+            <span>参与项目</span>
+          </div>
+          <div class="fact">
+            <strong>10+</strong>
+            <span>开源仓库</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 技能 ============ -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">02 — 技能</span>
+        <h2>我常用的工具与技术</h2>
+      </div>
+
+      <!-- ★ 修改这里：留下你会用的，删掉不用的 -->
+      <div class="skills reveal">
+        <div class="skill-group">
+          <h3>前端</h3>
+          <ul class="tags">
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Vue</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>后端与工具</h3>
+          <ul class="tags">
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Git</li>
+            <li>Docker</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>其他</h3>
+          <ul class="tags">
+            <li>UI 设计</li>
+            <li>技术写作</li>
+            <li>英语可读写</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 作品 ============ -->
+    <section class="section" id="projects">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">03 — 作品</span>
+        <h2>一些我做过的东西</h2>
+      </div>
+
+      <!-- ★ 修改这里：一个卡片 = 一个项目，可以复制更多 -->
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true">◆</span>
+            <h3>项目名称一</h3>
+          </div>
+          <p>一句话说明这个项目解决了什么问题、你负责了哪些部分。</p>
+          <ul class="tags tags--small">
+            <li>React</li>
+            <li>TypeScript</li>
+          </ul>
+          <a class="card__link" href="#" target="_blank" rel="noopener">查看项目 →</a>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true">◆</span>
+            <h3>项目名称二</h3>
+          </div>
+          <p>一句话说明这个项目解决了什么问题、你负责了哪些部分。</p>
+          <ul class="tags tags--small">
+            <li>Node.js</li>
+            <li>Python</li>
+          </ul>
+          <a class="card__link" href="#" target="_blank" rel="noopener">查看项目 →</a>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true">◆</span>
+            <h3>项目名称三</h3>
+          </div>
+          <p>一句话说明这个项目解决了什么问题、你负责了哪些部分。</p>
+          <ul class="tags tags--small">
+            <li>开源</li>
+            <li>工具</li>
+          </ul>
+          <a class="card__link" href="#" target="_blank" rel="noopener">查看项目 →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 联系 ============ -->
+    <section class="section" id="contact">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">04 — 联系</span>
+        <h2>聊聊合作或随便打个招呼</h2>
+      </div>
+
+      <div class="contact reveal">
+        <!-- ★ 修改这里：换成你的真实邮箱（mailto 和文字都要改） -->
+        <a class="contact__mail" href="mailto:your@email.com">your@email.com</a>
+
+        <!-- ★ 修改这里：social 链接换成你的主页地址；不用的整行删掉 -->
+        <ul class="social">
+          <li><a href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://x.com/你的用户名" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/你的用户名" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#" target="_blank" rel="noopener">博客</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> 你的名字 · 用 GitHub Pages 托管</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
